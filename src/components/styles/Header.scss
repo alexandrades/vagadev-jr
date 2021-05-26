@@ -1,0 +1,55 @@
+@import "./shared.scss";
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+
+    .header-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+
+        max-width: 1200px;
+        width: 1200px;
+
+        padding-top: 44px;
+
+        .n1-brand {
+
+            & > * {
+                padding-right: 43px;
+            }
+        }
+
+        .nav-menu {
+            flex-grow: 1;
+        }
+
+        .nav-menu ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            flex-grow: 1;
+            align-items: center;
+
+            .menu-item{
+                text-transform: uppercase;
+                padding: 0 43px 0 0;
+                font-weight: 500;
+                color: #fff;
+
+                &:not(:last-child) {
+                    border-right: 1px solid $silver;
+                }
+                .menu-icon {
+                    display: inline-block;
+                    height: 100%;
+                    padding: 0 15px 0 39px;
+                }
+            }
+        }
+    }
+}
