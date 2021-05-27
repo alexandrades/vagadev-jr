@@ -1,0 +1,77 @@
+@import './shared.scss';
+
+.order-confirmation-container {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba($dark, $alpha: 0.62);
+
+    .order-confitmation-content {
+        position: relative;
+        width: 400px;
+        height: 500px;
+        background-color: #fff;
+        border-radius: 5px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .close-button {
+            position: absolute;
+            top: 14px;
+            right: 9px;
+            width: 50px;
+            height: 50px;
+
+            background-color: transparent;
+            cursor: pointer;
+
+            img {
+                position: relative;
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+
+        span {
+            margin-top: 145px;
+            height: 1px;
+            width: 100%;
+            background-color: $dark;
+        }
+
+        h4 {
+            position: relative;
+            top: -30px;
+
+            font-size: 30px;
+            font-weight: 300;
+            color: $dark;
+            text-align: center;
+
+            width: 245px;
+            background-color: #fff;
+
+        }
+
+        img {
+            height: 279px;
+            width: 217px;
+            border-radius: 5px;
+
+            position: absolute;
+            bottom: 0;
+        }
+
+    }
+}

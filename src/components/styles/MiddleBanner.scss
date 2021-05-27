@@ -1,0 +1,21 @@
+@import './shared.scss';
+
+.middle-banner-container {
+    position: relative;
+    top: -150px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+
+    .middle-banner-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        max-width: 1200px;
+
+    }
+}

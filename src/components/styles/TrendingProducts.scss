@@ -1,0 +1,36 @@
+@import './shared.scss';
+
+.trending-container {
+    position: relative;
+    top: -70px;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .trending-content {
+        width: 1200px;
+        max-width: 1200px;
+
+        h3 {
+            font-size: 36px;
+            vertical-align: top;
+            font-weight: 300;
+            color: $dark;
+
+            span img {
+                width: 28px;
+                height: 28px;
+                margin-right: 22px;
+            }
+        }
+
+        .product-items {
+            display: flex;
+            gap: 33px;
+            justify-content: center;
+
+            margin-top: 80px;
+        }
+    }
+}
