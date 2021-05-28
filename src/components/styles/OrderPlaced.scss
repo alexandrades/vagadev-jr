@@ -16,7 +16,8 @@
 
     .order-confitmation-content {
         position: relative;
-        width: 400px;
+        max-width: 400px;
+        width: 100%;
         height: 500px;
         background-color: #fff;
         border-radius: 5px;
@@ -73,5 +74,11 @@
             bottom: 0;
         }
 
+    }
+}
+
+@media (min-width: 320px) and (max-width: 960px){
+    .order-confitmation-content {
+        margin: 0 15px;
     }
 }

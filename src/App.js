@@ -14,7 +14,7 @@ function App() {
         <Header/>
         <MiddleBanner />
         <TrendingProducts />
-        {/* <Footer />  */}
+        <Footer /> 
       </OrdersContextProvider>
     </>
   );

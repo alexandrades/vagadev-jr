@@ -3,71 +3,71 @@
 @import './shared.scss';
 
 .banner-container {
-    display: flex;///
-    width: 100%;///
-    position: relative;///
+    display: flex;
+    width: 100%;
+    position: relative;
     
     .banner-background {
-        width: 100vw;///
+        width: 100vw;
     }
     
     .banner-content {
-        position: absolute;///
-         display: flex;///
-         flex-direction: column;///
+        position: absolute;
+         display: flex;
+         flex-direction: column;
         
-        width: 100%;///
+        width: 100%;
 
         .banner-title {
-            font-weight: 900;///
-            text-transform: uppercase;///
-            color: #fff;///
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #fff;
         }
 
         .banner-price {
-            color: $blue;///
-            vertical-align: top;///
+            color: $blue;
+            vertical-align: top;
             
             .price-cents {
-                vertical-align: top;///
+                vertical-align: top;
 
-                position: relative;///
-                top: 7px;///
+                position: relative;
+                top: 7px;
             }
         }
         p {
-            color: #fff;///
-            text-align: right;///
+            color: #fff;
+            text-align: right;
         }
     }
 }
 
 .slider-navigation {
-    position: absolute;///
+    position: absolute;
 
     .current-product {
         
-        background-color: $blue;///
+        background-color: $blue;
         
         h2 {
-            white-space: nowrap;///
-            color: #fff;///
-            font-size: 14px;///
+            white-space: nowrap;
+            color: #fff;
+            font-size: 14px;
         }
     }
 
     .slider-buttons {
-        background-color: $dark;///
+        background-color: $dark;
 
         p {
-            color: #fff;///
-            text-align: center;///
+            color: #fff;
+            text-align: center;
         }
 
         button {
-            background: transparent;///
-            cursor: pointer;///
-            transition: all 0.1s;///
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.1s;
         }
 
     }

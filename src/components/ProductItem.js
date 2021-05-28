@@ -28,7 +28,7 @@ function ProductItem(props) {
                 <div className="product-info">
                     <p className="product-title">{props.productData.title}</p>
                     <h4 className="product-price">R$ {props.productData.price}</h4>
-                    <button onClick={buyHandleClick} disabled={verifyItem(props.productData)} type="button" className={verifyItem(props.productData) ? 'purchased' : ''}>{!verifyItem(props.productData) ? "Comprar" : "Comprado"}</button>
+                    <button onClick={buyHandleClick} disabled={verifyItem(props.productData)} type="button" className={verifyItem(props.productData) ? 'purchased' : ''}>{!verifyItem(props.productData) ? "Comprar" : "Comprado!"}</button>
                 </div>
             </div>
         </>

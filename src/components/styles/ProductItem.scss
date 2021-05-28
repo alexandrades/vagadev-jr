@@ -70,7 +70,7 @@
         }
         
         .purchased {
-            background-color: #96d4e0;
+            background-color: $dark;
         }
     }
 }
@@ -120,8 +120,8 @@
 
             button {
                 display: block;
-                width: 240px;
-                height: 52px;
+                width: 162px;
+                height: 35px;
                 color: #ffffff;
                 font-size: 18px;
                 font-weight: 900;
@@ -132,13 +132,7 @@
                 transition: all 0.3s;
                 cursor: pointer;
 
-                &:not(.purchased):hover {
-                    transform: scale(1.05);
-                }
-            }
-            
-            .purchased {
-                background-color: #96d4e0;
+                
             }
         }
     }
