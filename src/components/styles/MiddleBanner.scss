@@ -1,21 +1,63 @@
 @import './shared.scss';
 
 .middle-banner-container {
-    position: relative;
-    top: -150px;
-    display: flex;
-    justify-content: center;
     width: 100%;
-    margin: 0;
 
     .middle-banner-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
         width: 100%;
-        max-width: 1200px;
+    }
+}
 
+@media (min-width: 320px) and (max-width: 960px){
+    .middle-banner-container {
+        width: 100%;
+        .middle-banner-content {
+            width: 100%;
+            position: relative;
+            top: 50px;
+            padding: 0 20px;
+        }
+    }    
+}
+
+@media (min-width: 961px) and (max-width: 1280px){
+    .middle-banner-container {
+        position: relative;
+        top: -60px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+
+        .middle-banner-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            width: 100%;
+            margin: 0 20px;
+
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .middle-banner-container {
+        position: relative;
+        top: -150px;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    
+        .middle-banner-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+    
+            max-width: 1200px;
+    
+        }
     }
 }

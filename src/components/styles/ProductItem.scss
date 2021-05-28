@@ -3,17 +3,19 @@
 .product-container {
     box-shadow: 0px 4px 20px 7px rgba(0, 0, 0, 0.07);
     border-radius: 10px;
-    max-width: 350px;
+    max-width: 30%;
+    margin: 0 12px;
 
     .product-image {
         max-height: 362px;
+        width: 100%;
         padding-top: 36px;
         padding-bottom: 16px;
     }
 
     .divisor {
         display: block;
-        width: 350px;
+        width: 100%;
         height: 2px;
         background-color: $blue;
     }
@@ -29,9 +31,15 @@
 
         .product-title {
             font-size: 14px;
+            height: 15px;
             font-weight: 400;
+            max-width: 230px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
             padding-left: 36px;
+            padding-right: 36px;
         }
         
         .product-price {
@@ -56,9 +64,86 @@
             transition: all 0.3s;
             cursor: pointer;
 
-            &:hover {
+            &:not(.purchased):hover {
                 transform: scale(1.05);
             }
         }
+        
+        .purchased {
+            background-color: #96d4e0;
+        }
     }
+}
+
+@media (min-width: 320px) and (max-width: 960px){
+    .product-container {
+        box-shadow: 0px 4px 20px 7px rgba(0, 0, 0, 0.07);
+        border-radius: 10px;
+        max-width: 100%;
+
+        .product-image {
+            width: 100%;
+            padding-top: 36px;
+            padding-bottom: 16px;
+        }
+
+        .divisor {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: $blue;
+        }
+
+        .product-info {
+            
+
+            background-color: #F5F5F5;
+            color: $dark;
+            width: 100%;
+            padding-top: 24px;
+            padding-bottom: 21px;
+
+            .product-title {
+                font-size: 14px;
+                font-weight: 400;
+
+                padding-left: 36px;
+            }
+            
+            .product-price {
+                font-size: 18px;
+                font-weight: 900;
+                
+                padding-top: 27px;
+                padding-left: 36px;
+            }
+
+            button {
+                display: block;
+                width: 240px;
+                height: 52px;
+                color: #ffffff;
+                font-size: 18px;
+                font-weight: 900;
+                
+                background-color: $blue;
+                border-radius: 5px;
+                margin: 24px auto;
+                transition: all 0.3s;
+                cursor: pointer;
+
+                &:not(.purchased):hover {
+                    transform: scale(1.05);
+                }
+            }
+            
+            .purchased {
+                background-color: #96d4e0;
+            }
+        }
+    }
+}
+
+@media (min-width: 961px) and (max-width: 1280px){
+    
 }

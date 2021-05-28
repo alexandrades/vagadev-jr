@@ -1,133 +1,346 @@
 @import './shared.scss';
 
-.banner-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    position: relative;
+@import './shared.scss';
 
-    .overlay {
-        &::after {
-            content: '';
-    
-            opacity: 0.3;
-            background-color: #000;
-    
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-    }
+.banner-container {
+    display: flex;///
+    width: 100%;///
+    position: relative;///
     
     .banner-background {
-        width: 100%;
-        position: relative;
-
-        
+        width: 100vw;///
     }
     
     .banner-content {
-        position: absolute;
-        top: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        flex-grow: 1;
-
-        max-width: 1200px;
-        width: 100%;
-        height: 100%;
-        padding: 160px 130px 0 0;
-
-        transition: 500 all;
-
+        position: absolute;///
+         display: flex;///
+         flex-direction: column;///
+        
+        width: 100%;///
 
         .banner-title {
-            font-size: 46px;
-            font-weight: 900;
-            text-transform: uppercase;
-            color: #fff;
+            font-weight: 900;///
+            text-transform: uppercase;///
+            color: #fff;///
         }
 
         .banner-price {
-            font-size: 70px;
-            color: $blue;
-            vertical-align: top;
+            color: $blue;///
+            vertical-align: top;///
             
             .price-cents {
-                font-size: 28px;
-                vertical-align: top;
+                vertical-align: top;///
 
-                position: relative;
-                top: 7px;
+                position: relative;///
+                top: 7px;///
             }
         }
         p {
-            max-width: 420px;
-            margin-top: 28px;
-            font-weight: 300;
-            line-height: 155%;
-            vertical-align: top;
-
-            color: #fff;
-            font-size: 16px;
-            text-align: right;
+            color: #fff;///
+            text-align: right;///
         }
     }
 }
 
 .slider-navigation {
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    z-index: 10;
+    position: absolute;///
 
     .current-product {
-        width: 63px;
-        height: 300px;
-        overflow-y: hidden;
         
-        background-color: $blue;
+        background-color: $blue;///
         
         h2 {
-            white-space: nowrap;
-            transform: rotate(90deg);
-            color: #fff;
-            font-size: 14px;
-            padding-left: 60px;
+            white-space: nowrap;///
+            color: #fff;///
+            font-size: 14px;///
         }
     }
 
     .slider-buttons {
-        line-height: 42px;
-        width: 63px;
-        height: 84px;
-        
-        background-color: $dark;
-        border-bottom-left-radius: 10px;
+        background-color: $dark;///
 
         p {
-            color: #fff;
-            text-align: center;
+            color: #fff;///
+            text-align: center;///
         }
 
         button {
-            width: 31px;
-            height: 50%;
-            background: none;
-            color: rgb(189, 19, 19);
-            cursor: pointer;
-            transition: all 0.1s;
-
-            &:hover {
-                transform: scale(1.05);
-            }
+            background: transparent;///
+            cursor: pointer;///
+            transition: all 0.1s;///
         }
 
+    }
+}
+
+@media (min-width: 961px) and (max-width: 1280px){
+    .banner-container {
+        flex-direction: row;
+        justify-content: center;
+    
+        .overlay {
+            &::after {
+                content: '';
+        
+                opacity: 0.3;
+                background-color: #000;
+        
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        
+        .banner-background {
+            position: relative;       
+        }
+        
+        .banner-content {
+            top: 0;
+            align-items: flex-end;
+            flex-grow: 1;
+    
+            max-width: 1200px;
+            height: 100%;
+            padding: 130px 130px 0 0;
+    
+            transition: 500 all;
+    
+    
+            .banner-title {
+                font-size: 46px;
+            }
+    
+            .banner-price {
+                font-size: 65px;
+                
+                .price-cents {
+                    font-size: 25px;
+                }
+            }
+            p {
+                max-width: 420px;
+                line-height: 155%;
+                vertical-align: top;
+                font-size: 16px;
+            }
+        }
+    }
+    
+    .slider-navigation {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        z-index: 10;
+    
+        .current-product {
+            width: 63px;
+            height: 200px;
+            overflow-y: hidden;
+            
+            h2 {
+                transform: rotate(90deg);
+                padding-left: 60px;
+            }
+        }
+    
+        .slider-buttons {
+            line-height: 42px;
+            width: 63px;
+            height: 84px;
+            
+            border-bottom-left-radius: 10px;
+    
+            button {
+                width: 31px;
+                height: 50%;
+    
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+    
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 960px){
+    .banner-container {
+        flex-direction: column;
+        
+        .banner-content {
+            background-color: rgba(0, 0, 0, 0.65);
+            bottom: 0;
+            
+            padding: 15px 29px ;
+            text-align: right;
+    
+            .banner-title {
+                font-size: 26px;
+                margin-bottom: 10px;
+            }
+    
+            .banner-price {
+                font-size: 48px;
+                
+                .price-cents {
+                    font-size: 28px;
+                }
+            }
+            p {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 18.6px;
+            }
+        }
+    }
+
+    .slider-navigation {
+        bottom: -50px;
+        width: 100%;
+        height: 52px;
+        display: flex;
+        flex-direction: row;       
+    
+        .current-product {
+            
+            height: 100%;
+            flex-grow: 1;
+            
+            line-height: 50px;
+            border-bottom-left-radius: 10px;
+            
+            h2 {
+                padding-left: 22px;
+            }
+        }
+    
+        .slider-buttons {
+            display: flex;
+            line-height: 52px;
+            width: 140px;
+            height: 52px;
+            
+            p {
+                flex-grow: 1;
+            }
+    
+            button {
+                width: 40px;
+                height: 100%;
+            }
+    
+        }
+    }
+}
+
+@media (min-width: 1281px) {
+    .banner-container {
+        flex-direction: row;
+        justify-content: center;
+    
+        .overlay {
+            &::after {
+                content: '';
+        
+                opacity: 0.3;
+                background-color: #000;
+        
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        
+        .banner-content {
+            top: 0;
+            align-items: flex-end;
+            flex-grow: 1;
+    
+            max-width: 1200px;
+            height: 100%;
+            padding: 160px 130px 0 0;
+    
+            transition: 500 all;
+    
+            .banner-title {
+                font-size: 46px;
+            }
+    
+            .banner-price {
+                font-size: 70px;
+                
+                .price-cents {
+                    font-size: 28px;
+                }
+            }
+            p {
+                max-width: 420px;
+                margin-top: 28px;
+                font-weight: 300;
+                line-height: 155%;
+                vertical-align: top;
+    
+                font-size: 16px;
+            }
+        }
+    }
+    
+    .slider-navigation {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        z-index: 10;
+    
+        .current-product {
+            width: 63px;
+            height: 300px;
+            overflow-y: hidden;
+            
+            background-color: $blue;
+            
+            h2 {
+                white-space: nowrap;
+                transform: rotate(90deg);
+                color: #fff;
+                font-size: 14px;
+                padding-left: 60px;
+            }
+        }
+    
+        .slider-buttons {
+            line-height: 42px;
+            width: 63px;
+            height: 84px;
+            
+            background-color: $dark;
+            border-bottom-left-radius: 10px;
+    
+            p {
+                color: #fff;
+                text-align: center;
+            }
+    
+            button {
+                width: 31px;
+                height: 50%;
+                background: none;
+                color: rgb(189, 19, 19);
+                cursor: pointer;
+                transition: all 0.1s;
+    
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+    
+        }
     }
 }

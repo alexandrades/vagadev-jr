@@ -74,7 +74,7 @@ function FloatingMenu() {
             ]
         }
     ]
-
+    
     return (
         <>
             <div className="menu-content">
@@ -87,9 +87,9 @@ function FloatingMenu() {
                                     category.products.map((product) => {
                                         return (
                                             <a href={product.productUrl} className="category-item">{product.name}</a>
-                                        )
-                                    })
-                                }
+                                            )
+                                        })
+                                    }
                             </div>
                         )
                     })
@@ -100,26 +100,12 @@ function FloatingMenu() {
 }
 
 function Header() {
-    const {orderConfirmationView, setOrderConfirmationView} = useOrders()
+    const {orderConfirmationView, setOrderConfirmationView, cartItems, setCartItems} = useOrders()
     const [menuVisibility, setMenuVisibility] = useState(false)
-
+    
     const menuHandleClick = () => {
         menuVisibility ? setMenuVisibility(false) : setMenuVisibility(true)
     }
-
-    // const menuHandleEnter = () => {
-    //     if(!menuVisibility) {
-    //         setMenuVisibility(true)
-    //         return
-    //     }
-    // }
-    
-    // const menuHandleLeave = () => {
-    //     if(menuVisibility) {
-    //         setMenuVisibility(false)
-    //         return
-    //     }
-    // }
     
     return (
         <>
@@ -138,13 +124,14 @@ function Header() {
                     <nav className="nav-menu">
                         <ul>
                             <li className="menu-item">
-                                <span className="menu-icon"><img src="./svgs/paper-plane.svg" alt="Contato" /></span> Contato
+                                <span className="menu-icon"><img src="./svgs/paper-plane.svg" alt="Contato" /></span> <span>Contato</span>
                             </li>
                             <li className="menu-item">
-                                <span className="menu-icon"><img src="./svgs/search-solid.svg" alt="Buscar" /></span> Buscar
+                                <span className="menu-icon"><img src="./svgs/search-solid.svg" alt="Buscar" /></span> <span>Buscar</span>
                             </li>
                             <li className="menu-item">
-                                <span className="menu-icon"><img src="./svgs/shopping-bag-solid.svg" alt="Contato" /></span> <span id="cart-length">2</span>
+                                <span className="menu-icon"><img src="./svgs/shopping-bag-solid.svg" alt="Contato" /></span>
+                                <span id="cart-length">{cartItems.length}</span>
                             </li>
                         </ul>
                     </nav>

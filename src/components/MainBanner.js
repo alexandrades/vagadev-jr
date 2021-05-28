@@ -5,10 +5,11 @@ import './styles/MainBanner.scss'
 function MainBanner() {
     
     
-    const sliderData = [
+    let sliderData = [
         {
             index: 0,
-            imgSrc: "./img/principal_banner_desktop.jpg",
+            imgSrcDesktop: "./img/principal_banner_desktop.jpg",
+            imgSrcMobile: "./img/principal_banner_mobile.jpg",
             alt: "Mortal Kombat",
             title: "Mortal Kombat",
             price: [299, 99],
@@ -16,13 +17,15 @@ function MainBanner() {
         },
         {
             index: 1,
-            imgSrc: "./img/principal_banner_desktop_02.jpg",
+            imgSrcDesktop: "./img/principal_banner_desktop_02.jpg",
+            imgSrcMobile: "./img/principal_banner_mobile_02.jpg",
             alt: "Red Dead Redemption II",
             title: "Red Dead Redemption II",
             price: [199, 99],
             description: "Mortal Kombat X combina uma apresentação cinemática única com uma jogabilidade totalmente nova. Os jogadores podem escolher pela primeira vez diversas variantes de cada personagem, afetando tanto a estratégia como o estilo de luta."
         },
     ]
+
     const [sliderImage, setSliderImage] = useState(sliderData[0])
 
     useEffect(() => {
@@ -52,6 +55,7 @@ function MainBanner() {
 
     const nextHandleClick = () => {
         setSliderImage((prev) => {
+
             if(prev.index === sliderData.length - 1){
                 return sliderData[0]
             }
@@ -63,7 +67,7 @@ function MainBanner() {
         <>
             <div className="banner-container">
                 <div className="overlay">
-                    <img className="banner-background" src={sliderImage.imgSrc} alt={sliderImage.alt} />
+                    <img className="banner-background" src={window.innerWidth < 960 ? sliderImage.imgSrcMobile : sliderImage.imgSrcDesktop} alt={sliderImage.alt} />
                 </div>
                 <div className="banner-content">
                     <h2 className="banner-title">{sliderImage.title}</h2>

@@ -27,10 +27,102 @@
 
         .product-items {
             display: flex;
-            gap: 33px;
             justify-content: center;
 
             margin-top: 80px;
+
+            .navigation-button {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 960px){
+    .trending-container {
+        position: relative;
+        top: 42px;
+    
+        width: 100%;
+        padding: 0 10px;
+    
+        .trending-content {
+            width: 100%;
+            padding: 0 0px;
+            margin-top: 42px;
+    
+            h3 {
+                font-size: 18px;
+                vertical-align: top;
+                font-weight: 300;
+                color: $dark;
+    
+                span img {
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 22px;
+                }
+            }
+    
+            .product-items {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                margin-top: 31px;
+    
+                .navigation-button {
+                    display: block;
+                    height: 80px;
+                    width: 80px;
+                    background-color: transparent;
+                    
+                    img {
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 961px) and (max-width: 1280px){
+    .trending-container {
+        position: relative;
+        top: 0;
+    
+        width: 100%;
+        flex-grow: 1;
+    
+        .trending-content {
+            width: 95%;
+    
+            h3 {
+                font-size: 36px;
+                vertical-align: top;
+                font-weight: 300;
+                color: $dark;
+    
+                span img {
+                    width: 28px;
+                    height: 28px;
+                    margin-right: 22px;
+                }
+            }
+    
+            .product-items {
+                width: 100%;
+                display: flex;
+                gap: 33px;
+                justify-content: center;
+    
+                margin-top: 80px;
+    
+                .navigation-button {
+                    display: none;
+                }
+            }
         }
     }
 }
